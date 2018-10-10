@@ -4,7 +4,7 @@ import { Glyphicon, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './NavMenu.css';
 
-export class NavMenu extends Component {
+export class NavMenu extends Component {    //NavMenu.js tuottaa vasemman, mustan "palkin" käyttöliittymään
   displayName = NavMenu.name
 
   render() {
@@ -23,9 +23,9 @@ export class NavMenu extends Component {
                 <Glyphicon glyph='home' /> Home
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/counter'}>
+            <LinkContainer to={'/laskuri'}>
               <NavItem>
-                <Glyphicon glyph='education' /> Counter
+                <Glyphicon glyph='education' /> Laskuri
               </NavItem>
             </LinkContainer>
             <LinkContainer to={'/fetchdata'}>
