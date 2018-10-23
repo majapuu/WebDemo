@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './tyyli.css';
+// import './tyyli.css';
 
 export class Home extends Component { //avainsana extends
   displayName = Home.name

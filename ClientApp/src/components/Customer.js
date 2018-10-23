@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 
-export class FetchData extends Component {
-  displayName = FetchData.name
+export class Customer extends Component {
+  displayName = Customer.name
 
   constructor(props) {
     super(props);
-    this.state = { customers: [], loading: true };
+    this.state = { Customer: [], loading: true };
 
-    fetch('api/customer')
+    fetch('api/Customer')
       .then(response => response.json())
       .then(data => {
-        this.setState({ customers: data, loading: false });
+        this.setState({ Customer: data, loading: false });
       });
   }
 
-  static renderCustomersTable(customers) {
+  static renderCustomersTable(Customer) {
     return (
       <table className='table'>
         <thead>
@@ -26,12 +26,12 @@ export class FetchData extends Component {
           </tr>
         </thead>
         <tbody>
-          {customers.map(customer =>
-            <tr key={customers.CustomerID}>
-              <td>{customers.CustomerID}</td>
-              <td>{customers.CompanyName}</td>
-              <td>{customers.ContactName}</td>
-              <td>{customers.ContactTitle}</td>
+          {Customer.map(Customers =>
+            <tr key={Customers.customerID}>
+              <td>{Customers.customerID}</td>
+              <td>{Customers.companyName}</td>
+              <td>{Customers.contactName}</td>
+              <td>{Customers.contactTitle}</td>
             </tr>
           )}
         </tbody>
@@ -41,12 +41,12 @@ export class FetchData extends Component {
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
-      : FetchData.renderCustomersTable(this.state.customer);
+      ? <p><em>Lataa...</em></p>
+      : Customer.renderCustomersTable(this.state.Customer);
 
     return (
       <div>
-        <h1>Asikkaita</h1>
+        <h1>Tietoja asiakkaista</h1>
         <p>This component demonstrates fetching data from the server.</p>
         {contents}
       </div>

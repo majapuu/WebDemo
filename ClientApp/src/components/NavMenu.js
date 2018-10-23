@@ -33,7 +33,7 @@ export class NavMenu extends Component {    //NavMenu.js tuottaa vasemman, musta
                 <Glyphicon glyph='th-list' /> Fetch data
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/customer'}>
+            <LinkContainer to={'/Customer'}>
               <NavItem>
                 <Glyphicon glyph='th-list' /> Customer
               </NavItem>
